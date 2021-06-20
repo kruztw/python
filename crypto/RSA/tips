@@ -1,0 +1,16 @@
+encrypt
+openssl rsautl -encrypt -pubin -inkey pubkey.pem -in /flag -out encrypted.txt
+
+decrypt
+openssl rsautl -decrypt -inkey privkey.pem -in encrypted.txt -out flag.txt
+
+
+get n e
+./RsaCtfTool.py --dumpkey --key ../pubkey.pem
+
+get n e d p q 
+./RsaCtfTool.py --dumpkey --key ../privkey.pem
+
+
+
+
