@@ -8,7 +8,7 @@ with Popen(["ls"], stdout=PIPE) as proc:
 
 print( subprocess.check_output("ls", stderr=subprocess.STDOUT, shell=True) )
 
-subp = Popen("ls", shell=True, stdout=PIPE, stderr=PIPE, encoding="utf-8")
+subp = Popen("ls", shell=True, stdout=PIPE, stderr=PIPE, cwd=".", encoding="utf-8")
 subp.wait(2) # wait until 'ls' finish
 if subp.poll() == 0:
     print(subp.communicate()[0])
