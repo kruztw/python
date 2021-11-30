@@ -8,6 +8,24 @@ class myObj:
             return [ x for x in range(*key.indices(self.len()))]
         return key
 
+    def __truediv__(self, denomi):
+        print("__truediv__: ", denomi)
+        return self
+
+    def __str__(self):
+        print('__str__: ')
+        return ""
+
+    def __call__(self, *args, **kwargs):
+        print("__call__: ", args, kwargs)
+        return self    
+
+    def __getattribute__(self, attr):
+        try:
+            return object.__getattribute__(self, attr)
+        except AttributeError:
+            return f"attr '{attr}' not found"
+
     def __iter__(self):
         return self
 
@@ -30,3 +48,9 @@ print(obj[2:5])
 for i in obj:
     print(i)
 
+
+
+obj/1
+str(obj)
+obj(1, 2, key="val")
+print(obj.fuck)

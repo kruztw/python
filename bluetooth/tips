@@ -1,0 +1,5 @@
+# 先執行這個, 否則會掃不到 (但有時候還是掃不到)
+bluetoothctl
+[bluetooth]# power on
+
+

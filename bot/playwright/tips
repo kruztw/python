@@ -1,0 +1,3 @@
+# 開啟 wikipedia.org 並同步將使用者操作紀錄成 python code
+playwright codegen wikipedia.org
+

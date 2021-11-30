@@ -1,0 +1,16 @@
+server.py : 遊戲伺服器                                                           # 127.0.0.1:9999
+client.py : 玩家                                                                 # 127.0.0.1:<random_port>
+udp-relay.py : 轉發 udp 封包, 並呼叫 parser.py 修改封包, 修改完後發送出去        # 127.0.0.1:8888
+parser.py : 修改封包
+
+伺服器接到連線後會問玩家攻擊力, 但 client.py 有檢查攻擊力是否超過 10
+在現實中, 可能會有其他反外掛程式檢查使用者是否修改程式碼, 因此我們只能修改封包
+
+
+POC:
+python3 udp-relay.py 8888:127.0.0.1:9999
+python3 server.py
+python3 client.py
+
+
+

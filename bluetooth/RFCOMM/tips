@@ -1,0 +1,1 @@
+應該要有 raspberry pi , 然後用線連接 (我也不清楚), server.py 運行在 rasberry, client.py 運行在 host
