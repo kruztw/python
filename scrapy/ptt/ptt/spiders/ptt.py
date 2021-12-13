@@ -11,7 +11,7 @@ class PTTSpider(scrapy.Spider):    # 繼承 scrapy.Spider , 除了 parse_article
     def parse(self, response):
         for i in range(100):
             time.sleep(1)
-            url = "https://www.ptt.cc/bbs/Gossiping/index" + str(39164 - i) + ".html"
+            url = "https://www.ptt.cc/bbs/Gossiping/index" + str(100 - i) + ".html"
             yield scrapy.Request (url, cookies={'over18': '1'}, callback=self.parse_article)
     
     
