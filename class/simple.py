@@ -27,3 +27,9 @@ A_obj = A(3)
 A_obj.func1()
 
 A.func3(4)
+
+A_obj2: A = A(1)         # another way to declare object
+A_obj2.func1()
+
+A_obj3: A = A_obj2       # another way to declare object
+A_obj3.func1()
