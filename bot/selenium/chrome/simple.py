@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 import time
-import os
 
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import TimeoutException, WebDriverException
 
 TIMEOUT = 1
 
