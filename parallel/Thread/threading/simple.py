@@ -13,6 +13,11 @@ def print_tid(tid, counter):
 
 
 threadLock = Lock()
-thread1 = Thread(target=handler, args=(1, 5,)).start()
-thread1 = Thread(target=handler, args=(2, 5,)).start()
+thread1 = Thread(target=handler, args=(1, 5,))
+thread2 = Thread(target=handler, args=(2, 5,))
+
+thread1.start()
+thread2.start()
+thread1.join()
+thread2.join()
 
